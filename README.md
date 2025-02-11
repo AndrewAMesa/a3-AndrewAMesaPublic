@@ -1,5 +1,5 @@
 
-## Andrew Mesa's Web Application - Task Manager
+## Andrew Mesa's Web Application - Focusly
 
 ### Overview
 This project is a task manager with add, delete, and update functionalities. The items are sorted by priority level
