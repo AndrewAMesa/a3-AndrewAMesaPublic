@@ -21,7 +21,7 @@ function getUsername(req) {
 async function run() {
     try {
         await dbconnect.connect();
-        console.log("✅ Connected to MongoDB!");
+        console.log("Connected to MongoDB!");
 
         const db = dbconnect.db("cs4241");
         tasksCollection = db.collection("tasks");
