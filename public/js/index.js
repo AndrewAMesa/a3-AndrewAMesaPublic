@@ -17,7 +17,6 @@ const loadTable = async function () {
     const tableBody = document.querySelector("#data-table");
     tableBody.innerHTML = "";
 
-    // Sort by priority (High -> Medium -> Low)
     data.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
 
     data.forEach((task) => {

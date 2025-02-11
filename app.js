@@ -11,7 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// const url = "mongodb://localhost:27017/";
 const dbconnect = new MongoClient(process.env.MONGO_URI);
 let tasksCollection = null;
 
@@ -65,14 +64,13 @@ async function run() {
             res.json({ message: "Task deleted successfully!", deletedCount: result.deletedCount });
         });
 
-        // ✅ Start server after DB connection
         const PORT = process.env.PORT || 3000;
         app.listen(PORT, () => {
-            console.log(`✅ Server running on http://localhost:${PORT}`);
+            console.log(`Server running on http://localhost:${PORT}`);
         });
 
     } catch (err) {
-        console.error("❌ Error connecting to MongoDB:", err);
+        console.error("Error connecting to MongoDB:", err);
     }
 }
 
