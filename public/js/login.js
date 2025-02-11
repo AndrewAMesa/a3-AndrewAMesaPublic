@@ -13,6 +13,6 @@ document.getElementById("login-form").addEventListener("submit", (e) => {
     const password = document.getElementById("password").value;
 
     if (loginUser(username, password)) {
-        window.location.href = "index.html"; // ✅ Redirect after successful login
+        window.location.href = "index.html";
     }
 });
