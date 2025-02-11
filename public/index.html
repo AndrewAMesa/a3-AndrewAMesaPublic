@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple to-do list application to help manage tasks efficiently.">
+    <meta name="author" content="Andrew Mesa">
+    <meta name="keywords" content="to-do, task manager, productivity, list, planner">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nunito: ["Nunito", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <title>To-Do List - Home</title>
+</head>
+<body class="bg-gray-300 font-nunito">
+
+<header id="main-header" class="bg-slate-800 text-white pl-8 pt-3 pd-2">
+    <h1 id="welcome-text" class="text-3xl font-bold">Focusly: Welcome</h1>
+</header>
+
+<nav class="bg-slate-800 text-white pt-4 pl-4 pb-4">
+    <ul class="flex space-x-4">
+        <li>
+            <button id="logout-btn" class="px-4 py-2 rounded-md hover:bg-slate-700 transition text-white text-center">Logout</button>
+        </li>
+        <li>
+            <a href="index.html" class="px-4 py-2 rounded-md hover:bg-slate-700 transition text-white text-center inline-block">Home</a>
+        </li>
+        <li>
+            <a href="add_task.html" class="px-4 py-2 rounded-md hover:bg-slate-700 transition text-white text-center inline-block">Add Task</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="container mx-auto my-6 pl-6 pr-6">
+    <h1 class="text-3xl font-bold text-center pb-2">To-Do List</h1>
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-slate-800 text-white">
+            <tr>
+                <th class="px-6 py-3 text-center">Task</th>
+                <th class="px-6 py-3 text-center">Priority</th>
+                <th class="px-6 py-3 text-center">Creation Date</th>
+                <th class="px-6 py-3 text-center">Deadline</th>
+                <th class="px-6 py-3 text-center">Planned Duration</th>
+                <th class="px-6 py-3 text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="data-table" class="divide-y divide-gray-300 text-center">
+            </tbody>
+        </table>
+    </div>
+</main>
+<script type="module" src="/js/index.js"></script>
+</body>
+</html>

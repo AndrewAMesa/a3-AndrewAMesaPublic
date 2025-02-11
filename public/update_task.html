@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple to-do list application to help manage tasks efficiently.">
+  <meta name="author" content="Andrew Mesa">
+  <meta name="keywords" content="to-do, task manager, productivity, list, planner">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            nunito: ["Nunito", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <title>To-Do List-Update</title>
+</head>
+<body class="bg-gray-300 font-nunito">
+
+<header id="main-header" class="bg-slate-800 text-white pl-5 pt-3 pd-2">
+  <h1 class="text-3xl font-bold">Focusly</h1>
+</header>
+
+<nav class="bg-slate-800 text-white pt-4 pl-4 pb-4">
+  <ul class="flex space-x-6 pd-4">
+    <li><a href="index.html" class="px-1 py-2 rounded-md hover:bg-slate-700 transition">Home</a></li>
+    <li><a href="add_task.html" class="px-1 py-2 rounded-md hover:bg-slate-700 transition">Add Task</a></li>
+  </ul>
+</nav>
+
+<main class="container mx-auto my-8 max-w-3xl px-6 py-6 bg-white shadow-md rounded-md">
+  <form id="update-form" class="space-y-4">
+
+    <div>
+      <label for="task" class="block text-base font-semibold text-gray-800">New Task Description</label>
+      <input type="text" id="task" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400" placeholder="Enter new task description" required>
+    </div>
+
+    <div>
+      <label for="deadline_date" class="block text-base font-semibold text-gray-800">New Task Deadline</label>
+      <input type="date" id="deadline_date" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-400 focus:border-blue-400" required>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition">
+      Update Task
+    </button>
+
+  </form>
+</main>
+
+<script src="/js/update_task.js"></script>
+</body>
+</html>
