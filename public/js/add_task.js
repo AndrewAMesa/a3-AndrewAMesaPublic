@@ -15,7 +15,7 @@ const submit = async function(event) {
 
     const user = JSON.parse(localStorage.getItem("user"));
 
-    await fetch(`${BASE_URL}/api/data`, {
+    await fetch(`${BASE_URL}/data`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

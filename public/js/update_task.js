@@ -6,7 +6,7 @@ async function loadTaskDetails() {
 
     if (taskId) {
         const user = JSON.parse(localStorage.getItem("user"));
-        const response = await fetch(`${BASE_URL}/api/data`, {
+        const response = await fetch(`${BASE_URL}/data`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ async function handleUpdate(event) {
     const taskId = urlParams.get("taskId");
 
     if (taskId) {
-        await fetch(`${BASE_URL}/api/update/${taskId}`, {
+        await fetch(`${BASE_URL}/update/${taskId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ task: updatedTask, deadline_date: updatedDeadline })

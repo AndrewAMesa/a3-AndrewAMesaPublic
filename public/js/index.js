@@ -5,7 +5,7 @@ const priorityOrder = { High: 1, Medium: 2, Low: 3 };
 
 const loadTable = async function () {
     const user = JSON.parse(localStorage.getItem("user"));
-    const response = await fetch(`${BASE_URL}/api/data`, {
+    const response = await fetch(`${BASE_URL}/data`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const attachEventListeners = () => {
         button.addEventListener("click", async function () {
             const taskId = this.getAttribute("data-id");
 
-            await fetch(`${BASE_URL}/api/data/${taskId}`, { method: "DELETE" });
+            await fetch(`${BASE_URL}/data/${taskId}`, { method: "DELETE" });
 
             loadTable();
         });
